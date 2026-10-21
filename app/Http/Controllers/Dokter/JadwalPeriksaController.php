@@ -21,6 +21,7 @@ class JadwalPeriksaController extends Controller
         return view('dokter.jadwal-periksa.create');
     }
 
+    // Validasi form 
     public function store(Request $request)
     {
         $request->validate([
@@ -46,6 +47,7 @@ class JadwalPeriksaController extends Controller
         return view('dokter.jadwal-periksa.edit', compact('jadwal'));
     }
 
+    // Validasi form 
     public function update(Request $request, $id)
     {
         $request->validate([

@@ -29,6 +29,7 @@ class ObatController extends Controller
     /**
      * Simpan obat baru.
      */
+    // Validasi form 
     public function store(Request $request)
     {
         $validated = $request->validate($this->rules(), $this->messages());
@@ -52,6 +53,7 @@ class ObatController extends Controller
     /**
      * Perbarui data obat.
      */
+    // Validasi form
     public function update(Request $request, string $id)
     {
         $obat = Obat::findOrFail($id);
