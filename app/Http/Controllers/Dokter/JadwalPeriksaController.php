@@ -66,6 +66,7 @@ class JadwalPeriksaController extends Controller
     public function destroy($id)
     {
         $jadwal = JadwalPeriksa::where('id', $id)->where('id_dokter', Auth::id())->firstOrFail();
+        // Proses hapus data
         $jadwal->delete();
 
         return redirect()->route('jadwal-periksa.index')->with('success', 'Jadwal periksa berhasil dihapus.');

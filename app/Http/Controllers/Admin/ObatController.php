@@ -74,6 +74,7 @@ class ObatController extends Controller
         $obat = Obat::findOrFail($id);
 
         try {
+            // Proses hapus data
             $obat->delete();
         } catch (\Throwable $e) {
             report($e);
