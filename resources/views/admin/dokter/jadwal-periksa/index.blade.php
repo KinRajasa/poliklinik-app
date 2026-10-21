@@ -47,6 +47,7 @@
                             </td>
 
                             <td class="px-6 py-4">
+                                <!-- Notifikasi sukses -->
                                 @if($jadwal->status)
                                 <span class="badge bg-green-100 text-green-700 border-green-200 font-semibold">
                                     Aktif
